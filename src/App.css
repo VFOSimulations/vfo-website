@@ -4,10 +4,29 @@
   flex-direction: column;
 }
 
+/* Full-bleed banner band directly under the header. */
+.banner {
+  background: var(--vfo-accent);
+  color: var(--vfo-on-accent);
+  border-bottom: 1px solid var(--vfo-line);
+}
+
+.banner__inner {
+  max-width: var(--vfo-content-max-width);
+  margin: 0 auto;
+  padding: var(--vfo-space-6) var(--vfo-space-3);
+  text-align: center;
+}
+
+.tagline {
+  margin: 0;
+  text-wrap: balance;
+  font: var(--vfo-text-display); /* Montserrat 800 · 34px */
+  letter-spacing: -0.5px; /* per display spec */
+  color: inherit;
+}
+
+/* Empty content area fills the rest of the viewport below the banner. */
 .app__main {
   flex: 1 1 auto;
-  max-width: var(--vfo-content-max-width);
-  width: 100%;
-  margin: 0 auto;
-  padding: var(--vfo-space-4) var(--vfo-space-3);
 }

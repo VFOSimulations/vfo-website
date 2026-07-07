@@ -8,9 +8,14 @@ function App() {
   return (
     <div className="app">
       <Header theme={theme} onToggle={toggle} />
-      <main className="app__main" aria-label="Main content">
-        {/* No content yet — header-only shell. */}
-      </main>
+      <section className="banner">
+        <div className="banner__inner">
+          <h1 className="tagline">
+            Cockpit management resources for sim captains
+          </h1>
+        </div>
+      </section>
+      <main className="app__main" />
     </div>
   )
 }
