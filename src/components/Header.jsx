@@ -6,7 +6,7 @@ export default function Header({ theme, onToggle }) {
   return (
     <header className="header">
       <div className="header__inner">
-        <Logo theme={theme} />
+        <Logo />
         <ThemeToggle theme={theme} onToggle={onToggle} />
       </div>
     </header>

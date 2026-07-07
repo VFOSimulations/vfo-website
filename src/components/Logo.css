@@ -1,5 +1,22 @@
 .logo {
   display: block;
-  height: 72px; /* min lockup height is 28px; 72px for header presence */
+  height: 80px; /* min lockup height is 28px; 80px for header presence */
   width: auto;
+  font-family: var(--vfo-font-heading); /* Montserrat — the brand wordmark */
+}
+
+/* Colors track the theme via tokens: accent is blue-700 (light) / blue-400
+   (dark), matching the brand's primary and reversed lockups. */
+.logo__bar,
+.logo__sub,
+.logo__rule {
+  fill: var(--vfo-accent);
+}
+
+.logo__bar-accent {
+  fill: var(--vfo-blue-200); /* the lighter fourth bar, both themes */
+}
+
+.logo__word {
+  fill: var(--vfo-text);
 }
