@@ -1,0 +1,104 @@
+/* ============================================================
+   VFO Simulations — Design Tokens
+   VFO-DS-001 · REV 1 · JUL 2026
+   Source of truth: VFO Design Standards — Unified.dc.html
+   Usage: import this file, style with var(--vfo-*).
+   Dark theme: add [data-theme="dark"] on <html> or any subtree.
+   ============================================================ */
+
+:root {
+  /* ---- 2.1 Blue ramp ---- */
+  --vfo-blue-950: #0E1A2B;  /* dark surface, icon tile */
+  --vfo-blue-800: #113A6A;  /* hover on primary */
+  --vfo-blue-700: #0A4A8F;  /* primary · brand */
+  --vfo-blue-500: #2F73B8;  /* focus rings, charts */
+  --vfo-blue-400: #4D97D6;  /* interactive on dark */
+  --vfo-blue-200: #8FC1EA;  /* active / senior state */
+  --vfo-blue-100: #D6E7F5;  /* tinted fills, selection */
+
+  /* ---- 2.2 Neutrals ---- */
+  --vfo-ink:       #1A2433; /* text — never pure black */
+  --vfo-slate-700: #3C4756;
+  --vfo-slate-500: #5A6675;
+  --vfo-slate-300: #9FB0C4;
+  --vfo-border:    #DDE4EC;
+  --vfo-paper:     #F4F6F9;
+  --vfo-white:     #FBFCFD;
+
+  /* ---- 2.3 Annunciator status (state only — never decoration) ---- */
+  --vfo-normal:        #2E7D4F;
+  --vfo-normal-tint:   #E7F2EC;
+  --vfo-caution:       #C2851A;
+  --vfo-caution-tint:  #F7EFDE;
+  --vfo-warning:       #B3362B;
+  --vfo-warning-tint:  #F6E5E3;
+
+  /* ---- Semantic aliases (theme-aware) ---- */
+  --vfo-bg:             var(--vfo-white);
+  --vfo-bg-sunken:      var(--vfo-paper);
+  --vfo-surface:        #FFFFFF;
+  --vfo-text:           var(--vfo-ink);
+  --vfo-text-secondary: var(--vfo-slate-700);
+  --vfo-text-muted:     var(--vfo-slate-500);
+  --vfo-line:           var(--vfo-border);
+  --vfo-accent:         var(--vfo-blue-700);   /* links, CTAs, rules */
+  --vfo-accent-hover:   var(--vfo-blue-800);
+  --vfo-accent-tint:    #EDF4FB;
+  --vfo-focus:          var(--vfo-blue-500);
+  --vfo-on-accent:      #FFFFFF;
+
+  /* ---- 3.0 Typography ---- */
+  --vfo-font-heading: 'Montserrat', sans-serif;   /* 800/700/600/500 */
+  --vfo-font-body:    'Source Sans 3', sans-serif;/* 400/600 — long-form */
+  --vfo-font-data:    'IBM Plex Mono', monospace; /* readouts, codes */
+
+  --vfo-text-display: 800 34px/1.15 var(--vfo-font-heading); /* -0.5px tracking */
+  --vfo-text-h1:      800 24px/1.2  var(--vfo-font-heading);
+  --vfo-text-h2:      700 18px/1.3  var(--vfo-font-heading);
+  --vfo-text-label:   700 11px/1.2  var(--vfo-font-heading);  /* uppercase, +1.5px */
+  --vfo-text-body:    400 15px/1.6  var(--vfo-font-body);
+  --vfo-text-data:    500 13px/1.4  var(--vfo-font-data);
+  --vfo-tracking-label: 1.5px;
+  --vfo-min-font-ui: 13px;
+
+  /* ---- 4.0 Spacing & shape ---- */
+  --vfo-space-1: 8px;
+  --vfo-space-2: 16px;
+  --vfo-space-3: 24px;
+  --vfo-space-4: 32px;
+  --vfo-space-6: 48px;
+  --vfo-space-compact: 4px;    /* inside compact controls only */
+
+  --vfo-radius-control: 4px;
+  --vfo-radius-card:    6px;
+  --vfo-radius-modal:   10px;  /* never pills; icon tiles: 21% of size */
+
+  --vfo-shadow-overlay: 0 2px 8px rgba(16, 32, 56, 0.10); /* overlays only */
+  --vfo-content-max-width: 1120px;
+  --vfo-hit-target-min: 44px;
+}
+
+/* ---- Dark theme — apps, extensions, sim tools ---- */
+[data-theme="dark"] {
+  --vfo-bg:             var(--vfo-blue-950);
+  --vfo-bg-sunken:      var(--vfo-blue-950);
+  --vfo-surface:        #16263D;
+  --vfo-text:           rgba(255, 255, 255, 0.92);
+  --vfo-text-secondary: rgba(255, 255, 255, 0.78);
+  --vfo-text-muted:     rgba(255, 255, 255, 0.55);
+  --vfo-line:           rgba(255, 255, 255, 0.12);
+  --vfo-accent:         var(--vfo-blue-400);
+  --vfo-accent-hover:   var(--vfo-blue-200);
+  --vfo-accent-tint:    rgba(77, 151, 214, 0.12);
+  --vfo-on-accent:      var(--vfo-blue-950);
+
+  /* status lightened for dark surfaces */
+  --vfo-normal:       #4CAF7A;
+  --vfo-normal-tint:  rgba(76, 175, 122, 0.15);
+  --vfo-caution:      #E0A63C;
+  --vfo-caution-tint: rgba(224, 166, 60, 0.15);
+  --vfo-warning:      #E05E52;
+  --vfo-warning-tint: rgba(224, 94, 82, 0.15);
+
+  --vfo-shadow-overlay: none; /* dark theme: borders only, no shadows */
+}
