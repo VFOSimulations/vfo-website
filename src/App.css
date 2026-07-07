@@ -4,13 +4,7 @@
   flex-direction: column;
 }
 
-/* Full-bleed banner band directly under the header. */
-.banner {
-  background: var(--vfo-accent);
-  color: var(--vfo-on-accent);
-  border-bottom: 1px solid var(--vfo-line);
-}
-
+/* Banner band directly under the header (no fill — sits on the page bg). */
 .banner__inner {
   max-width: var(--vfo-content-max-width);
   margin: 0 auto;
@@ -23,7 +17,7 @@
   text-wrap: balance;
   font: var(--vfo-text-display); /* Montserrat 800 · 34px */
   letter-spacing: -0.5px; /* per display spec */
-  color: inherit;
+  color: var(--vfo-text);
 }
 
 /* Empty content area fills the rest of the viewport below the banner. */
