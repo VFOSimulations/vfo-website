@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 const STORAGE_KEY = 'vfo-theme'
 
@@ -19,9 +19,14 @@ function resolveInitialTheme() {
 
 export function useTheme() {
   const [theme, setTheme] = useState(resolveInitialTheme)
+  // Only an explicit toggle should be persisted. Persisting the first-visit
+  // OS-derived value would freeze the choice and stop following the OS on
+  // later visits, even though the user never chose a theme.
+  const userChose = useRef(false)
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme
+    if (!userChose.current) return
     try {
       localStorage.setItem(STORAGE_KEY, theme)
     } catch {
@@ -30,6 +35,7 @@ export function useTheme() {
   }, [theme])
 
   const toggle = useCallback(() => {
+    userChose.current = true
     setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))
   }, [])
 
