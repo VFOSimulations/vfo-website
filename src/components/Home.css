@@ -1,0 +1,15 @@
+/* Banner band directly under the header (no fill — sits on the page bg). */
+.banner__inner {
+  max-width: var(--vfo-content-max-width);
+  margin: 0 auto;
+  padding: var(--vfo-space-6) var(--vfo-space-3);
+  text-align: center;
+}
+
+.tagline {
+  margin: 0;
+  text-wrap: balance;
+  font: var(--vfo-text-display); /* Montserrat 800 · 34px */
+  letter-spacing: -0.5px; /* per display spec */
+  color: var(--vfo-text);
+}

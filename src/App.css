@@ -4,23 +4,7 @@
   flex-direction: column;
 }
 
-/* Banner band directly under the header (no fill — sits on the page bg). */
-.banner__inner {
-  max-width: var(--vfo-content-max-width);
-  margin: 0 auto;
-  padding: var(--vfo-space-6) var(--vfo-space-3);
-  text-align: center;
-}
-
-.tagline {
-  margin: 0;
-  text-wrap: balance;
-  font: var(--vfo-text-display); /* Montserrat 800 · 34px */
-  letter-spacing: -0.5px; /* per display spec */
-  color: var(--vfo-text);
-}
-
-/* Empty content area fills the rest of the viewport below the banner. */
+/* Content area between header and footer; grows to push the footer down. */
 .app__main {
   flex: 1 1 auto;
 }

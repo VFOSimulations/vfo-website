@@ -1,0 +1,38 @@
+.footer {
+  border-top: 1px solid var(--vfo-line);
+  background: var(--vfo-surface);
+}
+
+.footer__inner {
+  max-width: var(--vfo-content-max-width);
+  margin: 0 auto;
+  padding: var(--vfo-space-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--vfo-space-2);
+  flex-wrap: wrap;
+}
+
+.footer__copy {
+  font: var(--vfo-text-body);
+  font-size: 13px;
+  color: var(--vfo-text-muted);
+}
+
+.footer__nav {
+  display: flex;
+  gap: var(--vfo-space-3);
+}
+
+.footer__nav a {
+  font: var(--vfo-text-label);
+  letter-spacing: var(--vfo-tracking-label);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--vfo-text-secondary);
+}
+
+.footer__nav a:hover {
+  color: var(--vfo-accent);
+}

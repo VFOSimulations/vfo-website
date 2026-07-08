@@ -1,0 +1,49 @@
+.policy {
+  max-width: 68ch;
+  margin: 0 auto;
+  padding: var(--vfo-space-6) var(--vfo-space-3);
+  font: var(--vfo-text-body);
+  color: var(--vfo-text-secondary);
+}
+
+.policy__updated {
+  margin: 0 0 var(--vfo-space-1);
+  font: var(--vfo-text-label);
+  letter-spacing: var(--vfo-tracking-label);
+  text-transform: uppercase;
+  color: var(--vfo-text-muted);
+}
+
+.policy__title {
+  margin: 0 0 var(--vfo-space-3);
+  font: var(--vfo-text-h1);
+  color: var(--vfo-text);
+}
+
+.policy h2 {
+  margin: var(--vfo-space-4) 0 var(--vfo-space-1);
+  font: var(--vfo-text-h2);
+  color: var(--vfo-text);
+}
+
+.policy p,
+.policy li {
+  color: var(--vfo-text-secondary);
+}
+
+.policy ul {
+  margin: 0;
+  padding-left: var(--vfo-space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--vfo-space-1);
+}
+
+.policy a {
+  color: var(--vfo-accent);
+  text-decoration: none;
+}
+
+.policy a:hover {
+  text-decoration: underline;
+}
