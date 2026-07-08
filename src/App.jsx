@@ -11,7 +11,7 @@ function App() {
       <section className="banner">
         <div className="banner__inner">
           <h1 className="tagline">
-            Cockpit management resources for simulator captains
+            Cockpit Management Resources for Sim Captains
           </h1>
         </div>
       </section>
