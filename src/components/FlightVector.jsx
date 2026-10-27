@@ -1,7 +1,7 @@
 import './FlightVector.css'
 
-// Placeholder until the Google Form exists.
-const APPLY_URL = '#apply'
+const BETA_FORM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSeDZqGj_biXOEC9y5SbR8xHUNfuq678xnsNwq9768SeONPeDA/viewform'
 
 export default function FlightVector() {
   return (
@@ -16,7 +16,7 @@ export default function FlightVector() {
           it keeps flying.
         </p>
         <div className="fv__actions">
-          <a className="fv__btn fv__btn--primary" href={APPLY_URL}>Join the beta</a>
+          <a className="fv__btn fv__btn--primary" href={BETA_FORM_URL} target="_blank" rel="noreferrer">Join the beta</a>
           <a className="fv__btn fv__btn--secondary" href="#flightvector-demo">Watch the demo</a>
         </div>
         <p className="fv__own">Works with the aircraft you already own.</p>
@@ -87,7 +87,7 @@ export default function FlightVector() {
               We're picking a small group of MSFS 2024 pilots for the first beta. Sign up and we'll be in touch.
             </p>
           </div>
-          <a className="fv__btn fv__btn--inverse" href={APPLY_URL}>Sign up for the beta →</a>
+          <a className="fv__btn fv__btn--inverse" href={BETA_FORM_URL} target="_blank" rel="noreferrer">Sign up for the beta →</a>
         </div>
       </section>
 

@@ -3,7 +3,7 @@ import './Privacy.css'
 export default function Privacy() {
   return (
     <article className="policy">
-      <p className="policy__updated">Last updated: 8 July 2026</p>
+      <p className="policy__updated">Last updated: 26 October 2026</p>
       <h1 className="policy__title">Privacy Policy</h1>
 
       <p>
@@ -16,10 +16,21 @@ export default function Privacy() {
       <h2>Information we collect</h2>
       <ul>
         <li>
-          <strong>Information you provide.</strong> The Site has no accounts,
-          forms, sign-ups, or comment sections, so we do not directly collect
-          names, email addresses, or similar personal information. If that
-          changes, we will update this policy first.
+          <strong>Information you provide.</strong> The Site has no accounts or
+          comment sections. The only personal information we collect is what you
+          choose to enter in the FlightVector beta sign-up form (such as your
+          name, email address, simulator setup and the aircraft you fly). That
+          form is hosted on Google Forms, so Google processes it under the{' '}
+          <a
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Google Privacy Policy
+          </a>
+          . We use your answers only to select beta testers and to contact you
+          about the beta, keep them only as long as the beta needs them, and
+          delete them on request.
         </li>
         <li>
           <strong>Local preferences.</strong> The Site remembers your light or
@@ -92,8 +103,8 @@ export default function Privacy() {
       <h2>Contact</h2>
       <p>
         Questions about this policy? Email{' '}
-        <a href="mailto:privacy@vfosimulations.com">
-          privacy@vfosimulations.com
+        <a href="mailto:privacy@vfosim.com">
+          privacy@vfosim.com
         </a>
         .
       </p>
