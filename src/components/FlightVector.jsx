@@ -25,19 +25,20 @@ export default function FlightVector() {
       <section className="fv__demo" id="flightvector-demo">
         <figure className="fv__figure">
           <div className="fv__video">
-            <span className="fv__video-placeholder">
-              [DEMO VIDEO — stock aircraft, autopilot off, hands off]
-            </span>
-            <div className="fv__strip" aria-hidden="true">
-              <span className="fv__ann fv__ann--normal">RELEASED</span>
-              <span className="fv__ann">AP OFF</span>
-              <span className="fv__ann">A/THR OFF</span>
-              <span className="fv__ann">HANDS OFF</span>
-            </div>
+            <iframe
+              className="fv__iframe"
+              src="https://www.youtube-nocookie.com/embed/aD9ndyLcFzg?rel=0"
+              title="FlightVector landing practice: FlyByWire A32NX at St. Maarten"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              loading="lazy"
+            ></iframe>
           </div>
           <figcaption className="fv__caption">
-            Placed on a 3° final and released with the autopilot off. Nobody touches the
-            controls.
+            Landing practice at St. Maarten in the FlyByWire A32NX: placed on a 0.15 nm final,
+            released with the autopilot and autothrust off, and straight back on final after
+            every landing. Six landings in 3½ minutes.
           </figcaption>
         </figure>
       </section>

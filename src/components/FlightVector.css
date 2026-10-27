@@ -94,43 +94,17 @@
 }
 
 .fv__video {
-  position: relative;
   aspect-ratio: 16 / 9;
   border-radius: var(--vfo-radius-card);
   background: var(--vfo-blue-950);
-  display: grid;
-  place-items: center;
   overflow: hidden;
 }
 
-.fv__video-placeholder {
-  padding: var(--vfo-space-3);
-  text-align: center;
-  font: var(--vfo-text-data);
-  color: var(--vfo-blue-100);
-}
-
-.fv__strip {
-  position: absolute;
-  inset: auto var(--vfo-space-2) var(--vfo-space-2);
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--vfo-space-1);
-}
-
-.fv__ann {
-  padding: 6px 10px;
-  border-radius: var(--vfo-radius-control);
-  background: rgb(251 252 253 / 0.12);
-  color: var(--vfo-white);
-  font: 500 13px / 1.2 var(--vfo-font-data);
-  letter-spacing: 1px;
-}
-
-.fv__ann--normal {
-  background: var(--vfo-normal-tint);
-  color: var(--vfo-normal);
-  font-weight: 600;
+.fv__iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .fv__caption {
