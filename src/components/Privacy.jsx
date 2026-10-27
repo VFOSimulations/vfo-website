@@ -103,8 +103,8 @@ export default function Privacy() {
       <h2>Contact</h2>
       <p>
         Questions about this policy? Email{' '}
-        <a href="mailto:privacy@vfosimulations.com">
-          privacy@vfosimulations.com
+        <a href="mailto:privacy@vfosim.com">
+          privacy@vfosim.com
         </a>
         .
       </p>
