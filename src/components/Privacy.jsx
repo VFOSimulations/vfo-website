@@ -33,9 +33,10 @@ export default function Privacy() {
           delete them on request.
         </li>
         <li>
-          <strong>Embedded video.</strong> The FlightVector page embeds a YouTube
-          video in YouTube’s privacy-enhanced mode (youtube-nocookie.com). The
-          page contacts YouTube to show the player, and when you play the video,
+          <strong>Embedded video.</strong> The FlightVector page shows a still
+          image, served from the Site itself, in place of its demo video. Nothing
+          is loaded from YouTube until you press play. When you do, the YouTube
+          player loads in its privacy-enhanced mode (youtube-nocookie.com), and
           YouTube (Google) processes data such as your IP address under the{' '}
           <a
             href="https://policies.google.com/privacy"
@@ -92,8 +93,8 @@ export default function Privacy() {
       <p>
         We do not set advertising or analytics cookies. Our analytics is
         cookieless, and our fonts are served from the Site itself rather than a
-        third-party font network. The embedded YouTube player may store data in
-        your browser once you play the video.
+        third-party font network. If you press play on the demo video, the
+        YouTube player loads and may store data in your browser.
       </p>
 
       <h2>Your choices</h2>

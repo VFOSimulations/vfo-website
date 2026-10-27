@@ -1,4 +1,8 @@
 import './FlightVector.css'
+import { useState } from 'react'
+
+const DEMO_VIDEO_ID = 'aD9ndyLcFzg'
+const DEMO_TITLE = 'FlightVector landing practice: FlyByWire A32NX at St. Maarten'
 
 const BETA_FORM_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSeDZqGj_biXOEC9y5SbR8xHUNfuq678xnsNwq9768SeONPeDA/viewform'
@@ -11,6 +15,9 @@ function scrollToDemo(e) {
 }
 
 export default function FlightVector() {
+  // Click-to-play: nothing loads from YouTube until the visitor presses play.
+  const [playing, setPlaying] = useState(false)
+
   return (
     <article className="fv">
       <section className="fv__hero">
@@ -32,15 +39,37 @@ export default function FlightVector() {
       <section className="fv__demo" id="flightvector-demo">
         <figure className="fv__figure">
           <div className="fv__video">
-            <iframe
-              className="fv__iframe"
-              src="https://www.youtube-nocookie.com/embed/aD9ndyLcFzg?rel=0"
-              title="FlightVector landing practice: FlyByWire A32NX at St. Maarten"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              loading="lazy"
-            ></iframe>
+            {playing ? (
+              <iframe
+                className="fv__iframe"
+                src={`https://www.youtube-nocookie.com/embed/${DEMO_VIDEO_ID}?rel=0&autoplay=1`}
+                title={DEMO_TITLE}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            ) : (
+              <button
+                type="button"
+                className="fv__poster"
+                onClick={() => setPlaying(true)}
+                aria-label={`Play video: ${DEMO_TITLE}`}
+              >
+                <img
+                  className="fv__poster-img"
+                  src="/demo/flightvector-landing-loop.jpg"
+                  alt=""
+                  width="1280"
+                  height="720"
+                />
+                <span className="fv__play" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </span>
+                <span className="fv__poster-note">Plays on YouTube</span>
+              </button>
+            )}
           </div>
           <figcaption className="fv__caption">
             Landing practice at St. Maarten in the FlyByWire A32NX: placed on a 0.15 nm final,
