@@ -3,7 +3,7 @@ import './Privacy.css'
 export default function Privacy() {
   return (
     <article className="policy">
-      <p className="policy__updated">Last updated: 26 October 2026</p>
+      <p className="policy__updated">Last updated: 27 October 2026</p>
       <h1 className="policy__title">Privacy Policy</h1>
 
       <p>
@@ -31,6 +31,20 @@ export default function Privacy() {
           . We use your answers only to select beta testers and to contact you
           about the beta, keep them only as long as the beta needs them, and
           delete them on request.
+        </li>
+        <li>
+          <strong>Embedded video.</strong> The FlightVector page embeds a YouTube
+          video in YouTube’s privacy-enhanced mode (youtube-nocookie.com). The
+          page contacts YouTube to show the player, and when you play the video,
+          YouTube (Google) processes data such as your IP address under the{' '}
+          <a
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Google Privacy Policy
+          </a>
+          .
         </li>
         <li>
           <strong>Local preferences.</strong> The Site remembers your light or
@@ -78,7 +92,8 @@ export default function Privacy() {
       <p>
         We do not set advertising or analytics cookies. Our analytics is
         cookieless, and our fonts are served from the Site itself rather than a
-        third-party font network.
+        third-party font network. The embedded YouTube player may store data in
+        your browser once you play the video.
       </p>
 
       <h2>Your choices</h2>
