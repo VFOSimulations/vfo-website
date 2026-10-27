@@ -87,6 +87,8 @@
 
 .fv__demo {
   padding-block: var(--vfo-space-3) 72px;
+  /* "Watch the demo" scrolls here; keep the video clear of the sticky header. */
+  scroll-margin-top: 96px;
 }
 
 .fv__figure {
