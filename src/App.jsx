@@ -4,10 +4,13 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './components/Home'
 import Privacy from './components/Privacy'
+import FlightVector from './components/FlightVector'
 import { useTheme } from './hooks/useTheme'
 
+const ROUTES = { '#privacy': 'privacy', '#flightvector': 'flightvector' }
+
 function currentRoute() {
-  return window.location.hash === '#privacy' ? 'privacy' : 'home'
+  return ROUTES[window.location.hash] ?? 'home'
 }
 
 function App() {
@@ -27,7 +30,7 @@ function App() {
     <div className="app">
       <Header theme={theme} onToggle={toggle} />
       <main className="app__main">
-        {route === 'privacy' ? <Privacy /> : <Home />}
+        {route === 'privacy' ? <Privacy /> : route === 'flightvector' ? <FlightVector /> : <Home />}
       </main>
       <Footer />
     </div>
