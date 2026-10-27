@@ -3,6 +3,13 @@ import './FlightVector.css'
 const BETA_FORM_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSeDZqGj_biXOEC9y5SbR8xHUNfuq678xnsNwq9768SeONPeDA/viewform'
 
+// The site routes by hash, so an in-page "#id" link would leave this page.
+// Scroll to the video instead and keep the route.
+function scrollToDemo(e) {
+  e.preventDefault()
+  document.getElementById('flightvector-demo')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
+
 export default function FlightVector() {
   return (
     <article className="fv">
@@ -17,7 +24,7 @@ export default function FlightVector() {
         </p>
         <div className="fv__actions">
           <a className="fv__btn fv__btn--primary" href={BETA_FORM_URL} target="_blank" rel="noreferrer">Join the beta</a>
-          <a className="fv__btn fv__btn--secondary" href="#flightvector-demo">Watch the demo</a>
+          <a className="fv__btn fv__btn--secondary" href="#flightvector" onClick={scrollToDemo}>Watch the demo</a>
         </div>
         <p className="fv__own">Works with the aircraft you already own.</p>
       </section>
