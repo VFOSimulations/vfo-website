@@ -15,9 +15,8 @@ export default function Privacy() {
 
       <h2>Who is responsible</h2>
       <p>
-        The data controller for the Site is [LEGAL NAME — the company, or Rori
-        Stumpf trading as VFO Simulations], [POSTAL ADDRESS]. You can reach us
-        about anything in this policy at{' '}
+        The data controller for the Site is Rori Stumpf, trading as VFO
+        Simulations. You can reach us about anything in this policy at{' '}
         <a href="mailto:privacy@vfosim.com">privacy@vfosim.com</a>.
       </p>
 
