@@ -20,6 +20,15 @@
   color: var(--vfo-text-muted);
 }
 
+.footer__legal {
+  flex-basis: 100%;
+  margin: 0;
+  font: var(--vfo-text-body);
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--vfo-text-muted);
+}
+
 .footer__nav {
   display: flex;
   gap: var(--vfo-space-3);
